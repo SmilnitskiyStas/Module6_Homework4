@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Create Product";
+}
+
+<span>@ViewBag.Message</span>
+
+<form method="post">
+    <div>
+        <p>
+            <label asp-for="Title">Name for Book:</label>
+            <input type="text" asp-for="Title" />
+            <span asp-validation-for="Title" />
+            <br />
+        </p>
+        <p>
+            <label asp-for="Author">Author:</label>
+            <input type="text" asp-for="Author" />
+            <span asp-validation-for="Author" />
+            <br />
+        </p>
+        <p>
+            <label asp-for="DateOfCreate">Date of Create:</label>
+            <input type="date" asp-for="DateOfCreate" />
+            <span asp-validation-for="DateOfCreate" />
+            <br />
+        </p>
+        <p>
+            <label asp-for="Price">Price:</label>
+            <input type="text" asp-for="Price" />
+            <span asp-validation-for="Price" />
+            <br />
+        </p>
+
+        <p>
+            <input type="submit" value="Submit" />
+        </p>
+    </div>
+</form>

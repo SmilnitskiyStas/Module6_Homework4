@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "All Product";
+
+    @model IEnumerable<Product>;
+}
+
+<ul>
+    @foreach (Product product in Model)
+    {
+        <div class="@product.Id">
+            <li>Book name: @product.Title</li>
+            <li>Author: @product.Author</li>
+            <li>Price: @product.Price</li>
+            <li>Date create: @product.DateOfCreate</li>
+            <br />
+
+            <div>
+                <a href="/Home/EditProduct/@product.Id">Edit</a>
+                <a href="/Home/DeleteProduct/@product.Id">Delete</a>
+            </div>
+            <br />
+        </div>
+    }
+</ul>
